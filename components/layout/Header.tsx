@@ -8,10 +8,13 @@ export default function Header() {
       <nav className="container mx-auto max-w-7xl w-[95vw] flex justify-between items-center">
         <ul className="flex justify-start items-center gap-8">
           <li className="py-10 flex justify-center items-center gap-2 text-lg cursor-pointer">
-            <li className="flex justify-center items-center gap-2 md:text-lg text-md cursor-pointer">
+            <Link
+              href="#"
+              className="flex justify-center items-center gap-2 md:text-lg text-md cursor-pointer"
+            >
               <BiCategory className="md:text-3xl text-xl" />
               دسته بندی ویدیو
-            </li>
+            </Link>
           </li>
 
           <li className="py-10 hidden md:flex justify-center items-center gap-2 text-lg cursor-pointer">

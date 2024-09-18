@@ -46,7 +46,7 @@ export default function Product() {
   return (
     <section className="w-[100%] mt-14 lg:mt-28">
       <div className="flex justify-between items-start mt-12">
-        <div className="lg:w-[70%] w-[100%] flex flex-col gap-4 items-center">
+        <div className="lg:w-[70%] w-[100%] flex flex-col gap-4 lg:items-center items-start">
           <div className="w-full rounded-lg">
             <video
               controls
@@ -129,9 +129,9 @@ export default function Product() {
               مشاهده و خرید
             </button>
           </article>
-          {/* <div className="lg:hidden"> */}
-            <RelationVideos isMobile={true} productInfo={productInfo} />
-          {/* </div> */}
+          <div className="lg:hidden">
+            <RelationVideos productInfo={productInfo} />
+          </div>
 
           <form className="w-full relative">
             <input
@@ -220,9 +220,9 @@ export default function Product() {
           <button className="text-blue text-lg">
             <strong>+ بیشتر ببینید</strong>
           </button>
-          {/* <div className="hidden lg:block"> */}
-            <RelationVideos isMobile={false} productInfo={productInfo} />
-          {/* </div> */}
+          <div className="hidden lg:block">
+            <RelationVideos productInfo={productInfo} />
+          </div>
         </div>
         <div className="w-[25%] hidden lg:block sticky top-1">
           <ProductSidebar />
