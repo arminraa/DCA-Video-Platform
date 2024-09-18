@@ -1,13 +1,18 @@
+"use client";
 import { BiCategory } from "react-icons/bi";
 import { IoBook } from "react-icons/io5";
 import { FaStore } from "react-icons/fa";
 import Link from "next/link";
+import HeadDropdown from "./HeadDropdown";
 export default function Header() {
   return (
     <header className="bg-gradient-to-r from-blue to-blue-400 w-full text-white">
       <nav className="container mx-auto max-w-7xl w-[95vw] flex justify-between items-center">
         <ul className="flex justify-start items-center gap-8">
-          <li className="py-10 flex justify-center items-center gap-2 text-lg cursor-pointer">
+          <li
+            className="py-10 flex justify-center items-center gap-2 text-lg cursor-pointer"
+            onMouseEnter={() => <HeadDropdown />}
+          >
             <Link
               href="#"
               className="flex justify-center items-center gap-2 md:text-lg text-md cursor-pointer"
