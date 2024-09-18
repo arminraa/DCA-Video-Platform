@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*@font-face {
+  font-family: "Vazir";
+  src: url(../public/fonts/Vazir.eot);
+
+  src: url(../public/fonts/Vazir.eot) format("embedded-opentype"),
+    url(../public/fonts/Vazir.woff2) format("woff2"),
+    url(../public/fonts/Vazir.woff) format("woff"),
+    url(../public/fonts/Vazir.ttf) format("truetype");
+
+}*/
+@import "@/node_modules/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css";
+@font-face {
+  font-family: "IranianSans";
+  src: url("../public/fonts/IranianSansRegular.ttf") format("truetype"),
+    url("../public/fonts/IRANSans-web.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "IranianSans", sans-serif !important;
+}
+
+.mui-113lt9r-MuiPaper-root-MuiAccordion-root::before {
+  background-color: transparent !important;
+}
+
+.loader {
+  width: 60px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side, #85898f 90%, #0000);
+  background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+  background-size: calc(100% / 3) 50%;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
+
+.scroll-custom::-webkit-scrollbar {
+  display: none;
+}
