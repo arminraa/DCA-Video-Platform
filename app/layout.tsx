@@ -21,6 +21,7 @@ export default function RootLayout({
         <DataProvider>
           <AppRouterCacheProvider>
             <Header />
+            
             {/* <NextNprogress>
               <main>
                 <div className="container mx-auto max-w-8xl w-[95vw] flex items-start justify-between">
