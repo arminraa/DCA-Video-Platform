@@ -129,9 +129,9 @@ export default function Product() {
               مشاهده و خرید
             </button>
           </article>
-          <div className="lg:hidden">
-            <RelationVideos productInfo={productInfo} />
-          </div>
+          {/* <div className="lg:hidden"> */}
+            <RelationVideos isMobile={true} productInfo={productInfo} />
+          {/* </div> */}
 
           <form className="w-full relative">
             <input
@@ -220,9 +220,9 @@ export default function Product() {
           <button className="text-blue text-lg">
             <strong>+ بیشتر ببینید</strong>
           </button>
-          <div className="hidden lg:block">
-            <RelationVideos productInfo={productInfo} />
-          </div>
+          {/* <div className="hidden lg:block"> */}
+            <RelationVideos isMobile={false} productInfo={productInfo} />
+          {/* </div> */}
         </div>
         <div className="w-[25%] hidden lg:block sticky top-1">
           <ProductSidebar />

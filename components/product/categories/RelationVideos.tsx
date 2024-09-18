@@ -15,7 +15,7 @@ export default function RelationVideos({
   const backUrlImage = process.env.NEXT_PUBLIC_BACKEND_URL_IMAGE;
   return (
     <>
-      <section className="self-stretch py-12 flex flex-col gap-6 lg:hidden">
+      {/* <section className="self-stretch py-12 flex flex-col gap-6 lg:hidden">
         <strong className="text-lg text-gray-400 text-start">
           ویدیو های مرتبط
         </strong>
@@ -58,8 +58,8 @@ export default function RelationVideos({
               </div>
             </article>
           ))}
-      </section>
-      <section className="mt-20 hidden lg:block">
+      </section> */}
+      <section className="mt-20">
         <div className="text-start pr-4 flex flex-col gap-8">
           <strong className="text-gray-400 text-lg">ویدیو های مرتبط</strong>
           <section className="grid grid-cols-3 grid-rows-1 gap-4 justify-items-stretch content-center">
