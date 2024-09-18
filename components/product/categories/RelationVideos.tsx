@@ -5,7 +5,13 @@ import {
 } from "@/utils/helper/fetch/helper";
 import { CiClock1 } from "react-icons/ci";
 
-export default function RelationVideos({ productInfo }: any) {
+export default function RelationVideos({
+  productInfo,
+  isMobile,
+}: Readonly<{
+  productInfo: any;
+  isMobile: boolean;
+}>) {
   const backUrlImage = process.env.NEXT_PUBLIC_BACKEND_URL_IMAGE;
   return (
     <>
