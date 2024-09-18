@@ -27,7 +27,6 @@ export default function Header() {
               >
                 <BiCategory className="md:text-3xl text-xl" />
                 دسته بندی ویدیو
-                <HeadDropdown display={isVisible ? "block" : "hidden"} />
               </Link>
             </li>
 
@@ -50,6 +49,7 @@ export default function Header() {
           </div>
         </nav>
       </header>
+      <HeadDropdown display={isVisible ? "block" : "hidden"} />
     </>
   );
 }
