@@ -1,11 +1,12 @@
 "use client";
 import DataContext from "@/context/data/context";
-import { ContextValue } from "@/types/data/contextTypes";
+import { DataObj } from "@/types";
+import { ContextDataValue } from "@/types/data/contextTypes";
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import { useContext } from "react";
 import { RxCaretDown } from "react-icons/rx";
 export default function Sidebar() {
-  const { data } = useContext<ContextValue>(DataContext);
+  const { data } = useContext<ContextDataValue<DataObj>>(DataContext);
   return (
     <aside className="hidden xl:block h-auto bg-gray mt-28 w-[20%] rounded-2xl sticky top-1">
       <div className="container mx-auto max-w-lg w-[100%] px-6 py-1 pl-2">

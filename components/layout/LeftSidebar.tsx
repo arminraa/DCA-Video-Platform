@@ -2,11 +2,12 @@
 import { useContext } from "react";
 import Picture from "../Picture";
 import DataContext from "@/context/data/context";
-import { ContextValue } from "@/types/data/contextTypes";
+import { ContextDataValue } from "@/types/data/contextTypes";
+import { DataObj } from "@/types";
 
 export default function LeftSidebar() {
   const backUrlImage = process.env.NEXT_PUBLIC_BACKEND_URL_IMAGE;
-  const { data } = useContext<ContextValue>(DataContext);
+  const { data } = useContext<ContextDataValue<DataObj>>(DataContext);
   return (
     <aside className="h-auto lg:bg-gray bg-white w-[100%] rounded-2xl lg:py-8">
       <div className="lg:container lg:mx-auto lg:max-w-lg lg:w-[95%] w-[100%] lg:px-6 lg:pt-6">

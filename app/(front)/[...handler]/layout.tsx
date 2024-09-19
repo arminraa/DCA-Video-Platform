@@ -3,7 +3,7 @@
 import DataContext from "@/context/data/context";
 import { CategoryObj } from "@/types";
 import { ContextDataValue } from "@/types/data/contextTypes";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 export default function Layout({
   children,

@@ -1,5 +1,5 @@
 "use client";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { CiClock1 } from "react-icons/ci";
 import Picture from "../../Picture";
 import Link from "next/link";
@@ -7,10 +7,7 @@ import RightSidebar from "../../layout/RightSidebar";
 import { ContextDataValue } from "@/types/data/contextTypes";
 import { CategoryObj } from "@/types";
 import DataContext from "@/context/data/context";
-import {
-  convertEnToFaDate,
-  convertEnToFaTime,
-} from "@/utils/helper/fetch/helper";
+import { convertEnToFaDate, convertEnToFaTime } from "@/utils/helper";
 
 export default function Category() {
   const { data } = useContext<ContextDataValue<CategoryObj>>(DataContext);

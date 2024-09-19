@@ -1,8 +1,5 @@
 import Picture from "@/components/Picture";
-import {
-  convertEnToFaDate,
-  convertEnToFaTime,
-} from "@/utils/helper/fetch/helper";
+import { convertEnToFaDate, convertEnToFaTime } from "@/utils/helper";
 import { CiClock1 } from "react-icons/ci";
 
 export default function RelationVideos({

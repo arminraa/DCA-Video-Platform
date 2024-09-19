@@ -1,4 +1,4 @@
-import Axios, { AxiosInstance } from "axios";
+import Axios from "axios";
 
 const axios = Axios.create({
   baseURL: process.env.NEXT_PUBLIC_BACKEND_URL,
@@ -10,19 +10,3 @@ const axios = Axios.create({
 });
 
 export default axios;
-
-/*
-<Breadcrumbs aria-label="breadcrumb">
-  <Link underline="hover" color="inherit" href="/">
-    MUI
-  </Link>
-  <Link
-    underline="hover"
-    color="inherit"
-    href="/material-ui/getting-started/installation/"
-  >
-    Core
-  </Link>
-  <Typography sx={{ color: 'text.primary' }}>Breadcrumbs</Typography>
-</Breadcrumbs>
-*/

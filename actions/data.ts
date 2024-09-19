@@ -1,9 +1,9 @@
 "use server";
-import { getAxios } from "@/utils/helper/axios";
 
-async function getData(endpoint : string) {
-  const fetchedData = await getAxios(`${endpoint}`);
-  return fetchedData;
+import { getAxios } from "@/utils/axios";
+
+async function getData(endpoint: string) {
+  return await getAxios(`${endpoint}`);
 }
 
 export { getData };
