@@ -1,16 +1,22 @@
-import { BiCategory } from "react-icons/bi";
+"use client";
+import Link from "next/link";
 import { IoBook } from "react-icons/io5";
 import { FaStore } from "react-icons/fa";
-import Link from "next/link";
-export default function Header() {
+import MegaMenu from "./MegaMenu";
+import { BiCategory } from "react-icons/bi";
+import { useState } from "react";
+
+export default function Header({data} : any) {
+  const [active, setActive] = useState(false);
   return (
-    <header className="bg-gradient-to-r from-blue to-blue-400 w-full text-white">
-      <nav className="container mx-auto max-w-7xl w-[95vw] flex justify-between items-center">
+    <header className="bg-gradient-to-r from-blue to-blue-400 w-full text-white h-[115px]">
+      <nav className="container  mx-auto max-w-7xl w-[95vw] flex justify-between items-center relative">
         <ul className="flex justify-start items-center gap-8">
-          <li className="py-10 flex justify-center items-center gap-2 text-lg cursor-pointer">
+          <li className="py-10 text-lg cursor-pointer">
             <Link
               href="#"
               className="flex justify-center items-center gap-2 md:text-lg text-md cursor-pointer"
+              onClick={() => setActive(!active)}
             >
               <BiCategory className="md:text-3xl text-xl" />
               دسته بندی ویدیو
@@ -34,6 +40,7 @@ export default function Header() {
           </Link>
           <h3>ویدیو سیستم های حفاظتی</h3>
         </div>
+        <MegaMenu data={data} show={active} />
       </nav>
     </header>
   );

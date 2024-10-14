@@ -9,15 +9,17 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      blue: {
-        DEFAULT: "#2A0DE0",
-        400: "#150578",
-      },
-      white: "#fff",
-      gray: {
-        DEFAULT: "#F5F4F9",
-        400: "#85898F",
+    extend: {
+      colors: {
+        blue: {
+          DEFAULT: "#2A0DE0",
+          400: "#150578",
+        },
+        white: "#fff",
+        gray: {
+          DEFAULT: "#F5F4F9",
+          400: "#85898F",
+        },
       },
     },
   },

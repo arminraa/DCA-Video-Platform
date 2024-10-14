@@ -1,4 +1,4 @@
-"use client"; // Error boundaries must be Client Components
+"use client";
 
 export default function Error({
   error,
@@ -8,9 +8,14 @@ export default function Error({
   reset: () => void;
 }) {
   return (
-    <div>
-      <h2>{error.message}</h2>
-      <button onClick={() => reset()}>Try again</button>
+    <div className="flex flex-col justify-center items-center gap-4 w-full text-center mt-14 h-[40vh]">
+      <h2 className="text-red-600 text-4xl">{error.message}</h2>
+      <button
+        className="bg-blue-400 rounded-lg p-3 text-white text-2xl"
+        onClick={() => reset()}
+      >
+        تلاش دوباره
+      </button>
     </div>
   );
 }

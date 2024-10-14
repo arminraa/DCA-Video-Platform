@@ -18,7 +18,7 @@
     "@persian-tools/persian-tools": "^3.5.2",
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.5",
-    "next": "14.2.6",
+    "next": "^14.2.15",
     "next-nprogress-bar": "^2.3.13",
     "persian-date": "^1.1.0",
     "react": "^18",

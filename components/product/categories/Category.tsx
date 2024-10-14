@@ -1,24 +1,18 @@
-"use client";
-import { useContext } from "react";
 import { CiClock1 } from "react-icons/ci";
 import Picture from "../../Picture";
 import Link from "next/link";
 import RightSidebar from "../../layout/RightSidebar";
-import { ContextDataValue } from "@/types/data/contextTypes";
-import { CategoryObj } from "@/types";
-import DataContext from "@/context/data/context";
 import { convertEnToFaDate, convertEnToFaTime } from "@/utils/helper";
 
-export default function Category() {
-  const { data } = useContext<ContextDataValue<CategoryObj>>(DataContext);
+export default function Category({ data }: any) {
   const backUrlImage = process.env.NEXT_PUBLIC_BACKEND_URL_IMAGE;
   return (
     <>
       <RightSidebar />
       <div className="w-[100%] xl:w-[78%] mt-28 flex flex-col gap-2 items-center">
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-stretch content-center">
-          {data?.videos.map((video) => (
-            <Link key={video.id} href={video.slug}>
+          {data?.videos.map((video: any) => (
+            <Link key={video.id} href={`/${video.slug}`}>
               <article className="rounded-lg flex flex-col justify-center items-start gap-4 h-[300px]">
                 <Picture
                   src={`${backUrlImage}${video.poster}`}

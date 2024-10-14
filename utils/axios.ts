@@ -11,4 +11,4 @@ async function getAxios(url: string) {
   }
 }
 
-export {getAxios}
+export { getAxios };
