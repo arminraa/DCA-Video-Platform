@@ -1,5 +1,4 @@
-"use client";
-import Link from "next/link";
+import { BiCategory } from "react-icons/bi";
 import { IoBook } from "react-icons/io5";
 import { FaStore } from "react-icons/fa";
 import MegaMenu from "./MegaMenu";
