@@ -1,11 +1,12 @@
+"use client";
 import { BiCategory } from "react-icons/bi";
 import { IoBook } from "react-icons/io5";
 import { FaStore } from "react-icons/fa";
 import MegaMenu from "./MegaMenu";
-import { BiCategory } from "react-icons/bi";
 import { useState } from "react";
+import Link from "next/link";
 
-export default function Header({data} : any) {
+export default function Header({ data }: any) {
   const [active, setActive] = useState(false);
   return (
     <header className="bg-gradient-to-r from-blue to-blue-400 w-full text-white h-[115px]">

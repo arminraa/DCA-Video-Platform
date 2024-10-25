@@ -18,7 +18,7 @@ export default function MegaMenu({ show, data }: { show: boolean; data: any }) {
       <div className="md:text-lg lg:text-2xl self-start text-blue-400">
         <h3>دسته بندی ها</h3>
       </div>
-      <ul className="py-4 self-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center w-full gap-10 max-h-[200px]  lg:max-h-[600px] overflow-y-auto overflow-x-hidden">
+      <ul className="py-4 self-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center w-full gap-10 max-h-[200px]  lg:max-h-[600px] overflow-y-auto overflow-x-hidden scroll-custom">
         {data?.categories?.map((category: any, index: number) => (
           <li key={category.id}>
             <div className="radio-wrapper-8">

@@ -18,7 +18,7 @@ export default function MainContentPage({data} : any) {
         {data ? (
           data?.viewed?.map((post : any) => (
             <Link key={post.id} href={`/${post.category.slug}/${post.slug}`}>
-              <article className="flex flex-col gap-4 items-center flex-shrink-0 lg:h-auto relative w-[300px] lg:w-auto shadow-xl py-8 px-4 lg:py-0 lg:px-0 lg:shadow-none rounded-lg">
+              <article className="flex flex-col gap-4 items-center flex-shrink-0 h-[250px] lg:h-[210px] relative w-[300px] lg:w-auto shadow-xl py-8 px-4 lg:py-0 lg:px-0 lg:shadow-none rounded-lg">
                 <Picture
                   src={`${backUrlImage}${post.poster}`}
                   alt="Image"

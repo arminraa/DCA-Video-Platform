@@ -1,3 +1,4 @@
+"use client";
 import { FiDownload } from "react-icons/fi";
 import { AiOutlineDislike } from "react-icons/ai";
 import { AiOutlineLike } from "react-icons/ai";
@@ -9,14 +10,21 @@ import { FaShareAlt } from "react-icons/fa";
 import Picture from "@/components/Picture";
 import RelationVideos from "./RelationVideos";
 import Paragraph from "../Paragraph";
+import Plyr from "plyr";
+import { useEffect, useState } from "react";
 
 export default function Product({ data }: any) {
   const backUrlImage = process.env.NEXT_PUBLIC_BACKEND_URL_IMAGE;
+  const [playerState, setPlayerState] = useState<any>(null);
   /*const shareData: ShareData = {
     title: productInfo?.video.name,
     text: productInfo?.video.main_name,
     url: "http://localhost:3001/electric-lock/898",
   };*/
+  useEffect(() => {
+    const player = new Plyr("#player");
+    setPlayerState(player);
+  }, []);
 
   return (
     <section className="w-[100%] mt-14 lg:mt-28">
@@ -24,23 +32,16 @@ export default function Product({ data }: any) {
         <div className="lg:w-[70%] w-[100%] flex flex-col gap-4 lg:items-center items-start">
           <div className="w-full rounded-lg">
             <video
+              className="w-full h-[200px] object-cover"
+              id="player"
+              playsInline
               controls
-              poster={`${backUrlImage}${data?.video.poster}`}
-              className="w-full h-fit object-cover rounded-lg hidden lg:block"
-              src={data?.video.video.original}
+              data-poster={`${backUrlImage}${data?.video.poster}`}
               preload="metadata"
-              typeof="video/mp4"
-              controlsList="nodownload"
-            ></video>
-            <video
-              controls
-              poster={`${backUrlImage}${data?.video.poster}`}
-              className="w-full h-fit object-cover rounded-lg lg:hidden"
-              src={data?.video.video.original}
-              preload="metadata"
-              typeof="video/mp4"
-              controlsList="nofullscreen"
-            ></video>
+              onClick={() => playerState.pause()}
+            >
+              <source className="h-full" src={data?.video.video.original} type="video/mp4" />
+            </video>
           </div>
           <ul className="flex px-4 lg:px-0 lg:gap-12 gap-8 items-center w-full justify-end  py-10">
             <li className="flex gap-1 items-center flex-wrap">

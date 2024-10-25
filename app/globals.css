@@ -15,6 +15,7 @@
 /* ../public */
 
 @import "@/node_modules/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css";
+@import "@/node_modules/plyr/dist/plyr.css";
 
 @font-face {
   font-family: dana;
@@ -198,4 +199,8 @@ label.radio-wrapper-8:hover input + span:after {
 }
 label.radio-wrapper-8:hover input:checked + span:after {
   transform: scale(0.4);
+}
+
+.plyr__controls .plyr__controls__item.plyr__time  {
+  cursor: pointer;
 }
