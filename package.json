@@ -1,0 +1,38 @@
+{
+  "name": "next-dca",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.13.1",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@majidh1/jalalidatepicker": "^0.9.6",
+    "@mui/material": "^5.16.7",
+    "@mui/material-nextjs": "^5.16.6",
+    "@persian-tools/persian-tools": "^3.5.2",
+    "autoprefixer": "^10.4.20",
+    "axios": "^1.7.5",
+    "next": "^14.2.15",
+    "next-nprogress-bar": "^2.3.13",
+    "persian-date": "^1.1.0",
+    "plyr": "^3.7.8",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.3.0",
+    "shamsi-date-converter": "^1.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

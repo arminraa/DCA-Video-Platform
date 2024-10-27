@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*@font-face {
+  font-family: "Vazir";
+  src: url(../public/fonts/Vazir.eot);
+
+  src: url(../public/fonts/Vazir.eot) format("embedded-opentype"),
+    url(../public/fonts/Vazir.woff2) format("woff2"),
+    url(../public/fonts/Vazir.woff) format("woff"),
+    url(../public/fonts/Vazir.ttf) format("truetype");
+
+}*/
+/* ../public */
+
+@import "@/node_modules/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css";
+@import "@/node_modules/plyr/dist/plyr.css";
+
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 10;
+  src: url("../public/fonts/woff2/Dana-Hairline.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("../public/fonts/woff/Dana-Hairline.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 100;
+  src: url("../public/fonts/woff2/Dana-Thin.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("../public/fonts/woff/Dana-Thin.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 200;
+  src: url("../public/fonts/woff2/Dana-UltraLight.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("../public/fonts/woff/Dana-UltraLight.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../public/fonts/woff2/Dana-Light.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("../public/fonts/woff/Dana-Light.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../public/fonts/woff2/Dana-Medium.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("../public/fonts/woff/Dana-Medium.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 600;
+  src: url("../public/fonts/woff2/Dana-DemiBold.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("../public/fonts/woff/Dana-DemiBold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 800;
+  src: url("../public/fonts/woff2/Dana-ExtraBold.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("../public/fonts/woff/Dana-ExtraBold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 900;
+  src: url("../public/fonts/woff2/Dana-Black.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("../public/fonts/woff/Dana-Black.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../public/fonts/woff2/Dana-Bold.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("../public/fonts/woff/Dana-Bold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../public/fonts/woff2/Dana-Regular.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("../public/fonts/woff/Dana-Regular.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+/* @font-face {
+  font-family: "IranianSans";
+  src: url("../public/fonts/IranianSansRegular.ttf") format("truetype"),
+    url("../public/fonts/IRANSans-web.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+} */
+body {
+  font-family: dana !important;
+}
+
+.mui-113lt9r-MuiPaper-root-MuiAccordion-root::before {
+  background-color: transparent !important;
+}
+.css-113lt9r-MuiPaper-root-MuiAccordion-root::before {
+  background-color: transparent !important;
+}
+
+.loader {
+  width: 60px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side, #85898f 90%, #0000);
+  background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+  background-size: calc(100% / 3) 50%;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
+
+.scroll-custom::-webkit-scrollbar {
+  display: none;
+}
+
+label.radio-wrapper-8 {
+  display: block;
+  cursor: pointer;
+}
+label.radio-wrapper-8 input {
+  display: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+label.radio-wrapper-8 input + span {
+  line-height: 22px;
+  height: 22px;
+  padding-left: 22px;
+  display: block;
+  position: relative;
+}
+label.radio-wrapper-8 input + span:not(:empty) {
+  padding-left: 30px;
+}
+label.radio-wrapper-8 input + span:before,
+label.radio-wrapper-8 input + span:after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  display: block;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+label.radio-wrapper-8 input + span:before {
+  background: #d1d7e3;
+  transition: background 0.2s ease,
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2);
+}
+label.radio-wrapper-8 input + span:after {
+  background: #fff;
+  transform: scale(0.78);
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+}
+label.radio-wrapper-8 input:checked + span:before {
+  transform: scale(1.04);
+  background: #5d9bfb;
+}
+label.radio-wrapper-8 input:checked + span:after {
+  transform: scale(0.4);
+  transition: transform 0.3s ease;
+}
+label.radio-wrapper-8:hover input + span:before {
+  transform: scale(0.92);
+}
+label.radio-wrapper-8:hover input + span:after {
+  transform: scale(0.74);
+}
+label.radio-wrapper-8:hover input:checked + span:after {
+  transform: scale(0.4);
+}
+
+.plyr__controls .plyr__controls__item.plyr__time  {
+  cursor: pointer;
+}
