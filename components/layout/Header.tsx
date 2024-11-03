@@ -40,8 +40,8 @@ export default function Header({ data }: any) {
           </Link>
           <h3>ویدیو سیستم های حفاظتی</h3>
         </div>
-        <MegaMenu data={data} show={active} />
       </nav>
+        <MegaMenu data={data} show={active} setShow={setActive} />
     </header>
   );
 }

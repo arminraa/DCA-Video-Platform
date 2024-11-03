@@ -204,3 +204,8 @@ label.radio-wrapper-8:hover input:checked + span:after {
 .plyr__controls .plyr__controls__item.plyr__time  {
   cursor: pointer;
 }
+
+.no-scroll {
+  height: 100vh;
+  overflow-y: hidden;
+}

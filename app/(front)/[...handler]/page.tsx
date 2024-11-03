@@ -10,9 +10,9 @@ export default async function HandlerPage({ params }: any) {
   if (!data) {
     return <Loading />;
   } else {
-    if (data.type === "category") {
+    if (data?.type === "category") {
       return <Category data={data} />;
-    } else if (data.type === "video") {
+    } else if (data?.type === "video") {
       return <Product data={data} />;
     } else {
       return <NotFound />;
