@@ -8,6 +8,7 @@ import Link from "next/link";
 
 export default function Header({ data }: any) {
   const [active, setActive] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(0);
   return (
     <header className="bg-gradient-to-r from-blue to-blue-400 w-full text-white h-[115px]">
       <nav className="container  mx-auto max-w-7xl w-[95vw] flex justify-between items-center relative">
@@ -16,7 +17,10 @@ export default function Header({ data }: any) {
             <Link
               href="#"
               className="flex justify-center items-center gap-2 md:text-lg text-md cursor-pointer"
-              onClick={() => setActive(!active)}
+              onClick={() => {
+                setActive(!active);
+                setScreenWidth(window.innerWidth);
+              }}
             >
               <BiCategory className="md:text-3xl text-xl" />
               دسته بندی ویدیو
@@ -38,10 +42,10 @@ export default function Header({ data }: any) {
               dca video
             </h1>
           </Link>
-          <h3>ویدیو سیستم های حفاظتی</h3>
+          <h3 className="whitespace-nowrap">ویدیو سیستم های حفاظتی</h3>
         </div>
       </nav>
-        <MegaMenu data={data} show={active} setShow={setActive} />
+      <MegaMenu data={data} show={active} setShow={setActive} screenWidth={screenWidth} />
     </header>
   );
 }
