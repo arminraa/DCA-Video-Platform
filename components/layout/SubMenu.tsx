@@ -1,17 +1,33 @@
-export default function SubMenu({ subMenuShow, category }: any) {
+// "use client";
+import Link from "next/link";
+// import { useEffect } from "react";
+
+export default function SubMenu({
+  subMenuShow,
+  subItems,
+  itemName,
+  setSubMenuShow,
+}: any) {
+  // useEffect(() => {
+  //   if (JSON.stringify(subItems) === "[]") {
+  //     setSubMenuShow(null);
+  //   }
+  // }, []);
+
   return (
     <ul
+      style={{ transition: "all 300ms ease-in-out" }}
       className={`${
-        subMenuShow === category.id
+        subMenuShow === itemName 
           ? "pointer-events-auto h-[120px] overflow-auto opacity-1"
           : "pointer-events-none h-0 overflow-hidden opacity-0"
-      } transition-all bg-gray-300 flex flex-col md:h-auto md:overflow-auto md:grid md:grid-cols-3 md:gap-6 md:bg-transparent items-start gap-2 pr-2 md:left-[10%] md:right-[40%] md:top-20 md:absolute`}
+      } bg-gray-300 flex flex-col md:pointer-events-auto md:h-auto md:overflow-auto md:grid md:grid-cols-3 md:gap-6 md:bg-transparent items-start gap-2 pr-2 md:left-[10%] md:right-[40%] md:top-20 md:absolute`}
     >
-      <li>{category.name}</li>
-      <li>{category.name}</li>
-      <li>{category.name}</li>
-      <li>{category.name}</li>
-      <li>{category.name}</li>
+      {subItems?.map((child: any) => (
+        <li key={child.slug}>
+          <Link href={child.slug}>{child.name}</Link>
+        </li>
+      ))}
     </ul>
   );
 }

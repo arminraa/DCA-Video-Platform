@@ -6,7 +6,7 @@ import MegaMenu from "./MegaMenu";
 import { useState } from "react";
 import Link from "next/link";
 
-export default function Header({ data }: any) {
+export default function Header({ menuItems }: any) {
   const [active, setActive] = useState(false);
   const [screenWidth, setScreenWidth] = useState(0);
   return (
@@ -17,7 +17,7 @@ export default function Header({ data }: any) {
             <Link
               href="#"
               className="flex justify-center items-center gap-2 md:text-lg text-md cursor-pointer"
-              onClick={() => {
+              onMouseEnter={() => {
                 setActive(!active);
                 setScreenWidth(window.innerWidth);
               }}
@@ -45,7 +45,7 @@ export default function Header({ data }: any) {
           <h3 className="whitespace-nowrap">ویدیو سیستم های حفاظتی</h3>
         </div>
       </nav>
-      <MegaMenu data={data} show={active} setShow={setActive} screenWidth={screenWidth} />
+      <MegaMenu menuItems={menuItems} show={active} setShow={setActive} screenWidth={screenWidth} />
     </header>
   );
 }
