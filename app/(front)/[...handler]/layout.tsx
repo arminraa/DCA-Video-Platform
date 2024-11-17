@@ -7,7 +7,7 @@ export default function Layout({
   return (
     <div
       className={
-        "container mx-auto max-w-8xl w-[100vw] flex justify-between items-start"
+        "container mx-auto max-w-8xl w-[100vw] flex justify-between items-start relative"
       }
     >
       {children}

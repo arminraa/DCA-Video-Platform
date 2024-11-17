@@ -15,15 +15,16 @@
 /* ../public */
 
 @import "@/node_modules/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css";
-@import "@/node_modules/plyr/dist/plyr.css";
+/* @import "@/node_modules/plyr/dist/plyr.css"; */
+@import "@/node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
 
 @font-face {
   font-family: dana;
   font-style: normal;
   font-weight: 10;
   src: url("../public/fonts/woff2/Dana-Hairline.woff2") format("woff2"),
-    /* FF39+,Chrome36+, Opera24+*/ url("../public/fonts/woff/Dana-Hairline.woff")
-      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    /* FF39+,Chrome36+, Opera24+*/
+      url("../public/fonts/woff/Dana-Hairline.woff") format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }
 @font-face {
   font-family: dana;
@@ -38,8 +39,8 @@
   font-style: normal;
   font-weight: 200;
   src: url("../public/fonts/woff2/Dana-UltraLight.woff2") format("woff2"),
-    /* FF39+,Chrome36+, Opera24+*/ url("../public/fonts/woff/Dana-UltraLight.woff")
-      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    /* FF39+,Chrome36+, Opera24+*/
+      url("../public/fonts/woff/Dana-UltraLight.woff") format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }
 @font-face {
   font-family: dana;
@@ -62,16 +63,16 @@
   font-style: normal;
   font-weight: 600;
   src: url("../public/fonts/woff2/Dana-DemiBold.woff2") format("woff2"),
-    /* FF39+,Chrome36+, Opera24+*/ url("../public/fonts/woff/Dana-DemiBold.woff")
-      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    /* FF39+,Chrome36+, Opera24+*/
+      url("../public/fonts/woff/Dana-DemiBold.woff") format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }
 @font-face {
   font-family: dana;
   font-style: normal;
   font-weight: 800;
   src: url("../public/fonts/woff2/Dana-ExtraBold.woff2") format("woff2"),
-    /* FF39+,Chrome36+, Opera24+*/ url("../public/fonts/woff/Dana-ExtraBold.woff")
-      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    /* FF39+,Chrome36+, Opera24+*/
+      url("../public/fonts/woff/Dana-ExtraBold.woff") format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }
 @font-face {
   font-family: dana;
@@ -201,11 +202,15 @@ label.radio-wrapper-8:hover input:checked + span:after {
   transform: scale(0.4);
 }
 
-.plyr__controls .plyr__controls__item.plyr__time  {
+.plyr__controls .plyr__controls__item.plyr__time {
   cursor: pointer;
 }
 
 .no-scroll {
   height: 100vh;
   overflow-y: hidden;
+}
+
+.MuiTypography-root.MuiTypography-body1.MuiBreadcrumbs-root.css-63vwl1-MuiTypography-root-MuiBreadcrumbs-root {
+  font-family: dana !important;
 }

@@ -26,7 +26,7 @@ export default function Product({ data }: any) {
         <div className="lg:w-[70%] w-[100%] flex flex-col gap-4 lg:items-center items-start">
           <div className="w-full rounded-lg">
             <video
-              className="w-full h-[500px] object-cover"
+              className="w-full min-h-[200px] max-h-[600px] object-cover rounded-lg"
               controls
               poster={`${backUrlImage}${data?.video.poster}`}
               preload="metadata"
@@ -63,7 +63,7 @@ export default function Product({ data }: any) {
             <RelationVideos productInfo={data} />
           </div>
 
-          <form className="w-full relative">
+          {/* <form className="w-full relative">
             <input
               className="bg-gray w-full py-4 px-12 outline-none rounded-md"
               type="text"
@@ -149,7 +149,7 @@ export default function Product({ data }: any) {
           </article>
           <button className="text-blue text-lg">
             <strong>+ بیشتر ببینید</strong>
-          </button>
+          </button> */}
           <div className="hidden lg:block">
             <RelationVideos productInfo={data} />
           </div>

@@ -7,8 +7,8 @@ function convertEnToFaDate(date: string) {
       shamsi
         .gregorianToJalali(
           Number(date.split(" ")[0].split("-")[0]),
-          Number(date.split(" ")[0].split("-")[1]) as any,
-          Number(date.split(" ")[0].split("-")[2]) as any
+          Number(`0${date.split(" ")[0].split("-")[1]}`) as any,
+          Number(`0${date.split(" ")[0].split("-")[2]}`) as any
         )
         .toString()
     )
