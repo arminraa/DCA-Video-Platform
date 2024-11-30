@@ -1,6 +1,6 @@
-// "use client";
+"use client";
 import Link from "next/link";
-// import { useEffect } from "react";
+import { TransitionEvent, useEffect } from "react";
 
 export default function SubMenu({
   subMenuShow,
@@ -9,34 +9,38 @@ export default function SubMenu({
   setSubMenuShow,
   setShow,
 }: any) {
-  // useEffect(() => {
-  //   if (JSON.stringify(subItems) === "[]") {
-  //     setSubMenuShow(null);
+  useEffect(() => {
+    if (JSON.stringify(subItems) === "[]") {
+      setSubMenuShow(null);
+    }
+  }, []);
+  // const handleTransitionEnd = () => {
+  //   if (subMenuShow != itemName) {
+  //     document.getElementById("list")!.classList.replace("opacity-0", "hidden");
+  //   } else {
+  //     document.getElementById("list")!.classList.replace("opacity-100", "");
   //   }
-  // }, []);
+  // };
 
   return (
     <ul
-      // style={{ transition: "all 300ms ease-in-out" }}
-
-      className={`${
-        subMenuShow === itemName
-          ? "pointer-events-auto h-[120px] overflow-auto opacity-1"
-          : "pointer-events-none h-0 overflow-hidden opacity-0"
-      } bg-gray-300 flex flex-col md:pointer-events-auto md:h-auto md:overflow-auto md:grid md:grid-cols-3 md:gap-6 md:bg-transparent items-start gap-2 pr-2 md:left-[10%] md:right-[40%] md:top-20 md:absolute transition-opacity z-[200]`}
+      id="list"
+      style={{
+        transition: "all 100ms ease-in-out",
+      }}
+      className={
+        subMenuShow == itemName
+          ? "flex flex-col max-h-[350px] md:h-auto md:overflow-auto md:grid md:grid-cols-3 md:bg-transparent items-start gap-6 pr-6  md:pr-0 md:left-[10%] md:right-[40%] md:top-20 md:absolute transition-opacity list-disc md:list-none"
+          : "hidden flex-col h-0 overflow-hidden md:h-auto md:overflow-auto md:grid-cols-3 md:bg-transparent items-start gap-6 pr-6 md:pr-0 md:left-[10%] md:right-[40%] md:top-20 md:absolute transition-opacity list-disc md:list-none"
+      }
+      // onTransitionEnd={handleTransitionEnd}
     >
       {subItems &&
         subItems.map((child: any) => (
-          <li
-            className={
-              subMenuShow === itemName
-                ? "pointer-events-auto"
-                : "pointer-events-none"
-            }
-            key={child.slug}
-            onClick={() => setShow(false)}
-          >
-            <Link href={`/${child.slug}`}>{child.name}</Link>
+          <li key={child.slug}>
+            <Link onClick={() => setShow(false)} href={`/${child.slug}`}>
+              {child.name}
+            </Link>
           </li>
         ))}
     </ul>

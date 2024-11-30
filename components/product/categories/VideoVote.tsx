@@ -44,17 +44,21 @@ export default function VideoVote({ data }: any) {
         onClick={() => handleVote("dislike")}
         className="flex gap-1 items-center flex-wrap"
       >
-        <AiOutlineDislike className="lg:text-blue text-3xl text-gray-400" />
-        <strong className="hidden lg:inline">دوست نداشتم</strong>
-        <span>dislikes : {dislike}</span>
+        <div className="flex justify-center items-center gap-2">
+          <AiOutlineDislike className="lg:text-blue text-3xl text-gray-400" />
+          <strong className="hidden lg:inline">دوست نداشتم</strong>
+          <strong>{dislike}</strong>
+        </div>
       </button>
       <button
         onClick={() => handleVote("like")}
         className="flex gap-1 items-center flex-wrap"
       >
-        <AiOutlineLike className="lg:text-blue text-3xl text-gray-400" />
-        <strong className="hidden lg:inline">دوست داشتم</strong>
-        <span>likes : {like}</span>
+        <div className="flex justify-center items-center gap-2">
+          <AiOutlineLike className="lg:text-blue text-3xl text-gray-400" />
+          <strong className="hidden lg:inline">دوست داشتم</strong>
+          <strong>{like}</strong>
+        </div>
       </button>
     </div>
   );

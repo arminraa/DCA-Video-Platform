@@ -25,7 +25,7 @@ export default async function RootLayout({
               {children}
             </div>
           </main>
-          <Footer />
+          <Footer menuItems={menuItems} />
         </NextNprogress>
       </body>
     </html>

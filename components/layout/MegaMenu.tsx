@@ -28,54 +28,57 @@ export default function MegaMenu({
         ? null
         : item.name
     );
+    
+      console.log(subMenuShow);
+      console.log(item.name);
     // setSubMenuShow(null);
   };
 
-  // useEffect(() => {
-  //   // const a = useMediaQuery('(min-width:768px)');
-  //   window.addEventListener("resize", () => {
-  //     if (
-  //       document.body.classList.contains("no-scroll") &&
-  //       window.innerWidth > 768
-  //     ) {
-  //       document.body.classList.remove("no-scroll");
-  //     }
-  //     if (
-  //       !document.body.classList.contains("no-scroll") &&
-  //       window.innerWidth < 768
-  //     ) {
-  //       document.body.classList.add("no-scroll");
-  //     }
-  //   });
+  useEffect(() => {
+    // const a = useMediaQuery('(min-width:768px)');
+    window.addEventListener("resize", () => {
+      if (
+        document.body.classList.contains("no-scroll") &&
+        window.innerWidth > 768
+      ) {
+        document.body.classList.remove("no-scroll");
+      }
+      if (
+        !document.body.classList.contains("no-scroll") &&
+        window.innerWidth < 768
+      ) {
+        document.body.classList.add("no-scroll");
+      }
+    });
 
-  //   return () => {
-  //     window.removeEventListener("resize", () => {
-  //       if (
-  //         document.body.classList.contains("no-scroll") &&
-  //         window.innerWidth > 768
-  //       ) {
-  //         document.body.classList.remove("no-scroll");
-  //       }
-  //       if (
-  //         !document.body.classList.contains("no-scroll") &&
-  //         window.innerWidth < 768
-  //       ) {
-  //         document.body.classList.add("no-scroll");
-  //       }
-  //     });
-  //   };
-  // }, [window.innerWidth]);
+    return () => {
+      window.removeEventListener("resize", () => {
+        if (
+          document.body.classList.contains("no-scroll") &&
+          window.innerWidth > 768
+        ) {
+          document.body.classList.remove("no-scroll");
+        }
+        if (
+          !document.body.classList.contains("no-scroll") &&
+          window.innerWidth < 768
+        ) {
+          document.body.classList.add("no-scroll");
+        }
+      });
+    };
+  }, [window.innerWidth]);
 
-  // useEffect(() => {
-  //   if (show) {
-  //     document.body.classList.add("no-scroll");
-  //   } else {
-  //     document.body.classList.remove("no-scroll");
-  //   }
-  //   if (screenWidth > 768) {
-  //     document.body.classList.remove("no-scroll");
-  //   }
-  // }, [show]);
+  useEffect(() => {
+    if (show) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+    if (screenWidth > 768) {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [show]);
 
   return (
     <>
@@ -86,7 +89,11 @@ export default function MegaMenu({
         style={{ background: "rgba(0,0,0,.5)" }}
       />
       <div
-        onMouseLeave={() => setShow(false)}
+        onMouseLeave={() => {
+          setShow(false) 
+          setSubMenuShow(null)
+
+        }}
         className={`${
           show
             ? "pointer-events-auto opacity-1 translate-x-0"
@@ -98,8 +105,8 @@ export default function MegaMenu({
           className={`
             ${
               subMenuShow
-                ? "md:w-[30%] md:px-2 md:border-l-[1px] md:border-l-blue-400 pointer-events-auto"
-                : "md:w-full md:border-l-0 pointer-events-none"
+                ? "md:w-[30%] md:px-2 md:border-l-[1px] md:border-l-blue-400"
+                : "md:w-full md:border-l-0"
             } transition-all
               `}
         >
@@ -140,9 +147,9 @@ export default function MegaMenu({
                         onClick={() => handleClick(item, subMenuShow)}
                       >
                         {subMenuShow === item.name ? (
-                          <i className="bi bi-caret-down text-blue-400 hover:cursor-pointer"></i>
+                          <i className="bi bi-caret-down text-blue-400 cursor-pointer"></i>
                         ) : (
-                          <i className="bi bi-caret-left text-gray-500 hover:cursor-pointer"></i>
+                          <i className="bi bi-caret-left text-gray-500 cursor-pointer"></i>
                         )}
                       </span>
                     )}
@@ -162,7 +169,7 @@ export default function MegaMenu({
         <div
           className={`w-0 overflow-hidden md:overflow-y-auto md:max-h-[700px] ${
             subMenuShow ? "md:w-[70%]" : "md:w-0"
-          }  md:pt-4`}
+          } md:pt-4`}
         ></div>
       </div>
     </>

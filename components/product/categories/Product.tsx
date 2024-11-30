@@ -11,6 +11,8 @@ import Picture from "@/components/Picture";
 import RelationVideos from "./RelationVideos";
 import Paragraph from "../Paragraph";
 import VideoVote from "./VideoVote";
+import { Breadcrumbs } from "@mui/material";
+import Link from "next/link";
 
 export default function Product({ data }: any) {
   const backUrlImage = process.env.NEXT_PUBLIC_BACKEND_URL_IMAGE;
@@ -22,6 +24,28 @@ export default function Product({ data }: any) {
   };*/
   return (
     <section className="w-[100%] mt-14 lg:mt-28">
+      {/* <div className="lg:self-start self-center pb-10 lg:absolute lg:top-16 lg:right-4">
+        <Breadcrumbs
+          aria-label="breadcrumb"
+          // separator={<i className="bi bi-x"/>}
+        >
+          <Link color="inherit" href="/">
+            خانه
+          </Link>
+          {data &&
+            data.bread_crumb.map((item: any) => (
+              <Link
+                key={item.name}
+                // underline="hover"
+                color="inherit"
+                href={`/${item.slug}`}
+              >
+                {item.name}
+              </Link>
+            ))}
+
+        </Breadcrumbs>
+      </div> */}
       <div className="flex justify-between items-start mt-12">
         <div className="lg:w-[70%] w-[100%] flex flex-col gap-4 lg:items-center items-start">
           <div className="w-full rounded-lg">
