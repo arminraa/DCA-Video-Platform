@@ -4,6 +4,7 @@ import NextNprogress from "@/components/lib/NextNprogress";
 import "./globals.css";
 import { Metadata } from "next";
 import { getAxios } from "@/utils/axios";
+import Toastify from "@/components/lib/Toastify";
 
 export const metadata: Metadata = {
   title: "Dca Video",
@@ -27,6 +28,7 @@ export default async function RootLayout({
           </main>
           <Footer menuItems={menuItems} />
         </NextNprogress>
+        <Toastify />
       </body>
     </html>
   );

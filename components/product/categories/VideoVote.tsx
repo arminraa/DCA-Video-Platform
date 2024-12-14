@@ -9,6 +9,7 @@ import { FiDownload } from "react-icons/fi";
 import { redirect, usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import axios from "@/lib/axios";
+import { Flip, toast } from "react-toastify";
 
 export default function VideoVote({ data }: any) {
   const router = useRouter();
@@ -18,11 +19,38 @@ export default function VideoVote({ data }: any) {
   const [dislike, setDislike] = useState<number>(parseInt(data.video.dislike));
   const handleVote = async (vote: any) => {
     if (vote === "like") {
-      setLike((await getAxios(`/like/${data.video.slug}`)) ? like + 1 : like);
+      const isLiked: boolean = await getAxios(`/like/${data.video.slug}`);
+      setLike(isLiked ? like + 1 : like);
+      if (isLiked) {
+        toast.success("با موفقیت لایک شد", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Flip,
+        });
+      }
+      
     } else {
-      setDislike(
-        (await getAxios(`/dislike/${data.video.slug}`)) ? dislike + 1 : dislike
-      );
+      const isDisLiked: boolean = await getAxios(`/dislike/${data.video.slug}`);
+      setDislike(isDisLiked ? dislike + 1 : dislike);
+      if (isDisLiked) {
+        toast.success("با موفقیت دیسلایک شد", {
+          position: "top-right",
+          // autoClose: 3000,
+          hideProgressBar: false,
+          // closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Flip,
+        });
+      }
     }
   };
 

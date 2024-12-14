@@ -17,6 +17,7 @@
 @import "@/node_modules/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css";
 /* @import "@/node_modules/plyr/dist/plyr.css"; */
 @import "@/node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
+@import "@/node_modules/react-toastify/dist/ReactToastify.css";
 
 @font-face {
   font-family: dana;
@@ -210,7 +211,7 @@ label.radio-wrapper-8:hover input:checked + span:after {
   height: 100vh;
   overflow-y: hidden;
 }
-
-.MuiTypography-root.MuiTypography-body1.MuiBreadcrumbs-root.css-63vwl1-MuiTypography-root-MuiBreadcrumbs-root {
+.Toastify__toast-body {
   font-family: dana !important;
+  direction: rtl;
 }
