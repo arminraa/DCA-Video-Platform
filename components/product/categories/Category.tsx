@@ -22,9 +22,10 @@ export default async function Category({
     <>
       <RightSidebar menuItems={menuItems} />
       <div className="w-[100%] xl:w-[78%] mt-28 flex flex-col gap-2 items-center">
-        <div style={{fontFamily : "dana"}} className="lg:self-start self-center pb-10 lg:absolute lg:top-16 lg:right-4">
+        <div className="lg:self-start self-center pb-10 lg:absolute lg:top-16 lg:right-4">
           <Breadcrumbs
             aria-label="breadcrumb"
+            className="fontDana"
             // separator={<i className="bi bi-x"/>}
           >
             <Link color="inherit" href="/">

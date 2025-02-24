@@ -15,6 +15,9 @@ export default function Sidebar({ menuItems }: any) {
                 boxShadow: "none",
                 padding: "1rem 0",
               }}
+              expanded={
+                JSON.stringify(item.children) !== "[]" ? undefined : false
+              }
             >
               <AccordionSummary
                 expandIcon={

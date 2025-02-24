@@ -5,6 +5,7 @@ import { FaStore } from "react-icons/fa";
 import MegaMenu from "./MegaMenu";
 import { useState } from "react";
 import Link from "next/link";
+import MegaMenuFalseSSR from "./MegaMenuFalseSSR";
 
 export default function Header({ menuItems }: any) {
   const [active, setActive] = useState(false);
@@ -45,7 +46,18 @@ export default function Header({ menuItems }: any) {
           <h3 className="whitespace-nowrap">ویدیو سیستم های حفاظتی</h3>
         </div>
       </nav>
-      <MegaMenu menuItems={menuItems} show={active} setShow={setActive} screenWidth={screenWidth} />
+      {/* <MegaMenu
+        menuItems={menuItems}
+        show={active}
+        setShow={setActive}
+        screenWidth={screenWidth}
+      /> */}
+      <MegaMenuFalseSSR
+        menuItems={menuItems}
+        show={active}
+        setShow={setActive}
+        screenWidth={screenWidth}
+      />
     </header>
   );
 }

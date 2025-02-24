@@ -11,10 +11,16 @@ import Picture from "@/components/Picture";
 import RelationVideos from "./RelationVideos";
 import Paragraph from "../Paragraph";
 import VideoVote from "./VideoVote";
-import { Breadcrumbs } from "@mui/material";
+import { Breadcrumbs, Typography } from "@mui/material";
 import Link from "next/link";
 
-export default function Product({ data }: any) {
+export default function Product({
+  data,
+  activePage,
+}: Readonly<{
+  data: any;
+  activePage: string;
+}>) {
   const backUrlImage = process.env.NEXT_PUBLIC_BACKEND_URL_IMAGE;
   // const [playerState, setPlayerState] = useState<any>(null);
   /*const shareData: ShareData = {
@@ -24,6 +30,39 @@ export default function Product({ data }: any) {
   };*/
   return (
     <section className="w-[100%] mt-14 lg:mt-28">
+      {/* <div className="lg:self-start self-center pb-10 lg:absolute lg:top-16 lg:right-4">
+        <Breadcrumbs
+          aria-label="breadcrumb"
+          className="fontDana"
+          // separator={<i className="bi bi-x"/>}
+        >
+          <Link color="inherit" href="/">
+            خانه
+          </Link>
+          {data &&
+            data.bread_crumb.map((item: any) => (
+              <Link
+                key={item.name}
+                // underline="hover"
+                color="inherit"
+                href={`/${item.slug}`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          {activePage && (
+            <Link
+              // underline="hover"
+              color="inherit"
+              href={`/${activePage}`}
+            >
+              <Typography sx={{ color: "text.primary" }}>
+                {activePage}
+              </Typography>
+            </Link>
+          )}
+        </Breadcrumbs>
+      </div> */}
       {/* <div className="lg:self-start self-center pb-10 lg:absolute lg:top-16 lg:right-4">
         <Breadcrumbs
           aria-label="breadcrumb"

@@ -13,10 +13,10 @@ export default function MegaMenu({
   setShow,
   screenWidth,
 }: {
-  menuItems: any;
-  show: boolean;
-  setShow: any;
-  screenWidth: number;
+  menuItems?: any;
+  show?: boolean;
+  setShow?: any;
+  screenWidth?: number;
 }) {
   const [subMenuShow, setSubMenuShow] = useState<number | null>(null);
   const [subItemsIsEmpty, setSubItemsIsEmpty] = useState(false);
@@ -28,9 +28,9 @@ export default function MegaMenu({
         ? null
         : item.name
     );
-    
-      console.log(subMenuShow);
-      console.log(item.name);
+
+    console.log(subMenuShow);
+    console.log(item.name);
     // setSubMenuShow(null);
   };
 
@@ -75,7 +75,7 @@ export default function MegaMenu({
     } else {
       document.body.classList.remove("no-scroll");
     }
-    if (screenWidth > 768) {
+    if (screenWidth! > 768) {
       document.body.classList.remove("no-scroll");
     }
   }, [show]);
@@ -90,9 +90,8 @@ export default function MegaMenu({
       />
       <div
         onMouseLeave={() => {
-          setShow(false) 
-          setSubMenuShow(null)
-
+          setShow(false);
+          setSubMenuShow(null);
         }}
         className={`${
           show

@@ -11,9 +11,23 @@ export default async function HandlerPage({ params }: any) {
     return <Loading />;
   } else {
     if (data?.type === "category") {
-      return <Category data={data} activePage={params.handler.length  > 1 ? params.handler.join("/") : null}/>;
+      return (
+        <Category
+          data={data}
+          activePage={
+            params.handler.length > 1 ? params.handler.join("/") : null
+          }
+        />
+      );
     } else if (data?.type === "video") {
-      return <Product data={data} />;
+      return (
+        <Product
+          data={data}
+          activePage={
+            params.handler.length > 1 ? params.handler.join("/") : null
+          }
+        />
+      );
     } else {
       return <NotFound />;
     }
