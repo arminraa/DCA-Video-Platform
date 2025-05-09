@@ -10,10 +10,24 @@ export default async function HandlerPage({ params }: any) {
   if (!data) {
     return <Loading />;
   } else {
-    if (data.type === "category") {
-      return <Category data={data} />;
-    } else if (data.type === "video") {
-      return <Product data={data} />;
+    if (data?.type === "category") {
+      return (
+        <Category
+          data={data}
+          activePage={
+            params.handler.length > 1 ? params.handler.join("/") : null
+          }
+        />
+      );
+    } else if (data?.type === "video") {
+      return (
+        <Product
+          data={data}
+          activePage={
+            params.handler.length > 1 ? params.handler.join("/") : null
+          }
+        />
+      );
     } else {
       return <NotFound />;
     }

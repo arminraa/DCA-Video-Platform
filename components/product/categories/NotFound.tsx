@@ -1,3 +1,3 @@
 export default function NotFound() {
-  return <h1 className="text-8xl">Not Found</h1>;
+  return <h1 className="text-8xl h-10">Not Found</h1>;
 }

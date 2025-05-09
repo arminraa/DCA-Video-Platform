@@ -4,6 +4,7 @@ import NextNprogress from "@/components/lib/NextNprogress";
 import "./globals.css";
 import { Metadata } from "next";
 import { getAxios } from "@/utils/axios";
+import Toastify from "@/components/lib/Toastify";
 
 export const metadata: Metadata = {
   title: "Dca Video",
@@ -14,19 +15,20 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const fetchedData = await getAxios("/home");
+  const menuItems = await getAxios("/menu");
   return (
     <html lang="fa" dir="rtl" className="overflow-x-hidden">
       <body className="overflow-x-hidden">
-        <Header data={fetchedData} />
+        <Header menuItems={menuItems} />
         <NextNprogress>
           <main>
             <div className="container mx-auto max-w-8xl w-[95vw] flex items-start justify-between">
               {children}
             </div>
           </main>
-          <Footer />
+          <Footer menuItems={menuItems} />
         </NextNprogress>
+        <Toastify />
       </body>
     </html>
   );
